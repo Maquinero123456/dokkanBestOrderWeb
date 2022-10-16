@@ -17,7 +17,7 @@ jobs:
       - name: Set up Python 
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.9
           architecture: x64
       # Step 3
       - name: Install Python Virtual ENV
@@ -35,7 +35,8 @@ jobs:
       - name: Activate and Install Depencies into Virtual env
         run: python -m venv venv && source venv/bin/activate &&
           pip3 install -r requirements.txt
-        if: steps.cache-venv.outputs.cache-hit != 'true'      # Step 6     
+        if: steps.cache-venv.outputs.cache-hit != 'true'
+      # Step 6     
       - name: Activate venv and Run Test        
         run: . venv/bin/activate && pytest
       
