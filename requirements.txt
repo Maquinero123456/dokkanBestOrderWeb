@@ -6,3 +6,4 @@ pytest
 curio
 anyio
 uvicorn
+python-multipart
