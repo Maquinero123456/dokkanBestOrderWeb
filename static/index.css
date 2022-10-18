@@ -1,0 +1,26 @@
+
+body {
+    --color-bg: rgb(53,53,53);
+    --color-text: wheat;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+h1 {
+    color: var(--color-text);
+}
+
+
+h4 {
+    color: var(--color-text);
+}
+
+form {
+    color: var(--color-text);
+}
+
+p {
+    color: var(--color-text);
+}
