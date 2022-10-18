@@ -12,11 +12,16 @@ h1 {
     color: var(--color-text);
 }
 
-ol {
+
+h4 {
     color: var(--color-text);
 }
 
-li {
+form {
+    color: var(--color-text);
+}
+
+p {
     color: var(--color-text);
 }
 
