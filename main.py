@@ -6,12 +6,9 @@ from characterSearch import characterSearch
 from fastapi.responses import RedirectResponse
 from fastapi.responses import HTMLResponse
 from teamOptimizer import teamOptimizer
-from mangum import Mangum
 import os
 import json
-stage = os.environ.get('STAGE', None)
-openapi_prefix = f"/{stage}" if stage else "/"
-app = FastAPI(title="DokkanBestOrderWeb", openapi_prefix=openapi_prefix)
+app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
@@ -50,5 +47,3 @@ async def team(request : Request, leader : int = Form(), char2 : int = Form(), c
 @app.get("/character/{id}")
 async def team(id : int):
     return {"lider" : id}
-
-handler = Mangum(app)
