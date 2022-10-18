@@ -27,3 +27,11 @@ label {
 a {
     color: var(--color-text);
 }
+
+p {
+    color: var(--color-text);
+}
+
+h4 {
+    color: var(--color-text);
+}
